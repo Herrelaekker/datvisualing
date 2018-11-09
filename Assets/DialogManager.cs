@@ -7,7 +7,7 @@ public class DialogManager : MonoBehaviour {
 
     public Text nameText;
     public Text dialogText;
-    public Image personImage;
+    public GameObject personImage;
 
     public GameObject dialogBox;
 
@@ -16,7 +16,6 @@ public class DialogManager : MonoBehaviour {
     private Queue<Sprite> states;
 
     public GameObject[] optionButton;
-    public int choice = 0;
 
     // Use this for initialization
     void Start () {
@@ -27,6 +26,7 @@ public class DialogManager : MonoBehaviour {
 	
 	public void StartDialog (Dialog dialog)
     {
+        personImage.SetActive(true);
         //sætter valuesne til det man har defineret.
         optionButton = dialog.optionButton;
 
@@ -60,8 +60,6 @@ public class DialogManager : MonoBehaviour {
             states.Enqueue(sprite);
         }
 
-        print(name);
-
         //Vis næste besked
         DisplayNextSentence();
     }
@@ -76,8 +74,7 @@ public class DialogManager : MonoBehaviour {
         }
 
         Sprite sprite = states.Dequeue();
-        personImage.sprite = sprite;
-        personImage.enabled = false;
+        personImage.GetComponent<SpriteRenderer>().sprite = sprite;
 
         string name = names.Dequeue();
         nameText.text = name;
@@ -112,10 +109,4 @@ public class DialogManager : MonoBehaviour {
             optionButton[i].SetActive(true);
         }
     }
-
-    public void NewChoice()
-    {
-        choice += 1;
-    }
-
 }
