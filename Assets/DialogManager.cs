@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour {
     public Text nameText;
     public Text dialogText;
     public GameObject personImage;
+    private SpriteRenderer personSpriteRenderer;
 
     public GameObject dialogBox;
 
@@ -17,15 +18,21 @@ public class DialogManager : MonoBehaviour {
 
     public GameObject[] optionButton;
 
+    private string girlName;
+
     // Use this for initialization
     void Start () {
         sentences = new Queue<string>();
         names = new Queue<string>();
         states = new Queue<Sprite>();
-	}
+        personSpriteRenderer = personImage.GetComponent<SpriteRenderer>();
+
+    }
 	
 	public void StartDialog (Dialog dialog)
     {
+        girlName = dialog.girlName;
+
         personImage.SetActive(true);
         //sætter valuesne til det man har defineret.
         optionButton = dialog.optionButton;
@@ -73,10 +80,17 @@ public class DialogManager : MonoBehaviour {
             return;
         }
 
+
         Sprite sprite = states.Dequeue();
-        personImage.GetComponent<SpriteRenderer>().sprite = sprite;
+        personSpriteRenderer.sprite = sprite;
 
         string name = names.Dequeue();
+
+        if (name == girlName || name == "")
+            personSpriteRenderer.color = new Color32(255, 255, 255, 255);
+        else
+            personSpriteRenderer.color = new Color32(100, 100, 100, 255);
+
         nameText.text = name;
         //fjerner en besked fra listen
             string sentence = sentences.Dequeue();

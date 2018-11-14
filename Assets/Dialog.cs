@@ -6,6 +6,8 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Dialog {
 
+    public string girlName;
+
     public string[] name;
 
     [TextArea(3, 10)]
