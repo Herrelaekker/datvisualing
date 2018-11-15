@@ -249,10 +249,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    girlName: Rikke
+    girlName: Patricia
     name:
     - You
-    - Rikke
+    - Patricia
     sentences:
     - "Hey Rikke, I saw you were standing here all by yourself. I thought maybe you\u2019d
       want comapany?"
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    girlName: Rikke
+    girlName: Patricia
     name: []
     sentences: []
     state: []
@@ -965,7 +965,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Say Hi to Rikke
+  m_Text: Say Hi to Patricia
 --- !u!222 &682299521
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ GameObject:
   - component: {fileID: 1269621530}
   - component: {fileID: 1269621529}
   m_Layer: 5
-  m_Name: Bikini Boy
+  m_Name: Patricia
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1398,10 +1398,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    girlName: Rikke
+    girlName: Patricia
     name:
     - You
-    - Rikke
+    - Patricia
     sentences:
     - "I see your desk is always neatly organised. Gotta admit Im quite a bit of a
       messhead myself hah. You just as organized at home?\r"
@@ -1549,7 +1549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    girlName: Rikke
+    girlName: Patricia
     name: []
     sentences: []
     state: []
@@ -2069,10 +2069,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-    girlName: Rikke
+    girlName: Patricia
     name:
     - You
-    - Rikke
+    - Patricia
     sentences:
     - "Oh hey, could I have a cigerette, I forgot my pack at home. lol.\r"
     - "Oh I didnt know you smoke. Sure thing.\r\n*She clearly saw through the interested
