@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 516d970b98defab4cb26d45d68086e0c
   - enabled: 1
-    path: Assets/Scenes/Visual Novel Scene.unity
+    path: Assets/Scenes/Hangout.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Date.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/stats.unity
+    path: Assets/Scenes/Stats.unity
     guid: 913e7f96bde129c47b247f7d4c4f086e
-  - enabled: 1
-    path: Assets/Scenes/GirlManagement.unity
-    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}

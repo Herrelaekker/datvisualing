@@ -23,11 +23,6 @@ public class Stats : MonoBehaviour {
         statsNumberText = GameObject.Find("StatsNumber").GetComponent<Text>();
         statsNumberText.text = PlayerPrefs.GetInt("statsNumber").ToString();
     }
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
 
     public void AddStat()
     {
