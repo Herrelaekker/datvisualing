@@ -20,6 +20,11 @@ public class DialogManager : MonoBehaviour {
 
     private string girlName;
 
+    //saving progress
+    private int progress;
+
+    private Text energyText;
+
     // Use this for initialization
     void Start () {
         sentences = new Queue<string>();
@@ -27,6 +32,10 @@ public class DialogManager : MonoBehaviour {
         states = new Queue<Sprite>();
         personSpriteRenderer = personImage.GetComponent<SpriteRenderer>();
 
+        progress = 0;
+        PlayerPrefs.SetInt("progress",0);
+
+        energyText = FindObjectOfType<Curency>().energyText;
     }
 	
 	public void StartDialog (Dialog dialog)
@@ -80,6 +89,9 @@ public class DialogManager : MonoBehaviour {
             return;
         }
 
+        int energy = PlayerPrefs.GetInt("energy") - 1;
+        PlayerPrefs.SetInt("energy", energy);
+        energyText.text = energy.ToString();
 
         Sprite sprite = states.Dequeue();
         personSpriteRenderer.sprite = sprite;
@@ -122,5 +134,12 @@ public class DialogManager : MonoBehaviour {
         {
             optionButton[i].SetActive(true);
         }
+    }
+
+    public void MakingProgress()
+    {
+        progress += 1;
+        PlayerPrefs.SetInt("progress", progress);
+        Debug.Log(progress);
     }
 }

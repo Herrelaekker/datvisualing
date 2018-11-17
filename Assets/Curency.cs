@@ -24,6 +24,8 @@ public class Curency : MonoBehaviour {
         money = PlayerPrefs.GetInt("money");
         energy = PlayerPrefs.GetInt("energy");
 
+        PlayerPrefs.SetInt("energy",0);
+
         experience = PlayerPrefs.GetInt("experience");
 
         energyText.text = energy.ToString();
